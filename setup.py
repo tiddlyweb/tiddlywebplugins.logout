@@ -2,7 +2,7 @@ AUTHOR = 'Chris Dent'
 AUTHOR_EMAIL = 'cdent@peermore.com'
 NAME = 'tiddlywebplugins.logout'
 DESCRIPTION = '/logout for TiddlyWeb'
-VERSION = '0.8'
+VERSION = '0.9'
 
 
 import os
@@ -22,6 +22,7 @@ setup(
     packages = find_packages(exclude='test'),
     author_email = AUTHOR_EMAIL,
     platforms = 'Posix; MacOS X; Windows',
-    install_requires = ['setuptools'],
+    install_requires = ['setuptools',
+        'tiddlyweb>=1.2.0'],
     zip_safe = False
     )
