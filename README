@@ -2,7 +2,7 @@
 Simple /logout URL for TiddlyWeb.
 
 This is a pragmatic, simple way to invalidate the tiddlyweb_user
-cookie. Any authentic POST to /logout will cause the cookie to expire.
+cookie. A POST to /logout will cause the cookie to expire.
 
 See also http://tiddlyweb.com and http://github.com/tiddlyweb
 
