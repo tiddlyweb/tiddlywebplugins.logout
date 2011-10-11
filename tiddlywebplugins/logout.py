@@ -17,9 +17,13 @@ def logout(environ, start_response):
     """
     Expire the tiddlyweb_user cookie when a POST is received.
     """
-    uri = environ.get('HTTP_REFERER',
-            server_base_url(environ) +
-            environ['tiddlyweb.config'].get('logout_uri', '/'))
+    redirect = environ['tiddlyweb.query'].get('tiddlyweb_redirect', [None])[0]
+    if redirect:
+        uri = server_base_url(environ) + redirect.encode('UTF-8')
+    else:
+        uri = environ.get('HTTP_REFERER',
+                server_base_url(environ) +
+                environ['tiddlyweb.config'].get('logout_uri', '/'))
     path = environ.get('tiddlyweb.config', {}).get('server_prefix', '')
     cookie = Cookie.SimpleCookie()
     cookie['tiddlyweb_user'] = ''
