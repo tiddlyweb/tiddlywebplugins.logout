@@ -4,6 +4,9 @@ A simple logout plugin.
 This works with the simple_cookie extractor: a POST to /logout
 will expire the tiddlyweb_user cookie.
 
+To install add 'tiddlywebplugins.logout' to the system_plugins
+list in tiddlywebconfig.py.
+
 See also http://tiddlyweb.com and http://github.com/tiddlyweb
 """
 
