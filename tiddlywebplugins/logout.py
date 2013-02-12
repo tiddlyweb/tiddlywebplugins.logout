@@ -45,7 +45,7 @@ def logout(environ, start_response):
             '%a, %d %b %Y %H:%M:%S GMT', time.gmtime(time.time() - 600000))),
         ('Cache-Control', 'no-store'),
         ('Location', uri),
-        ])
+    ])
 
     return [uri]
 
